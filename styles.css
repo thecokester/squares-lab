@@ -17,6 +17,7 @@ button:hover {
 .divBox {
     float: left;
     margin: 10px;
-    
+    line-height: 200px;
+    text-align: center;
 }
 
