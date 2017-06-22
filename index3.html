@@ -9,11 +9,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>  
 <body>
-      
-
-    
-     
- 
+    <!--<div id="container">
+        <div>
+            <button onclick="addButton()" >Add new Box</button>
+        </div>
+        <div id="button-wrapper">
+            
+        </div>-->
+    </div>
 </body>
 <script>
   
@@ -21,5 +24,76 @@
 
    
 <script src="script3.js"></script>
+<!--<script>
+    var container = document.createElement('div')
+    document.body.appendChild(container)
+    var counter =0 
+    var buttonWrapper = document.getElementById("button-wrapper");
+    function addButton(){
+        var box = buildBox();
+        box.addEventListener('dblclick', function(event){
+            console.log( "you clicked ", event.target.id );
+            handleButtonClick( event.target );
+        });
+        box.addEventListener("click", function (event){
+            event.target.style.backgroundColor = randomColor();
+        })
+        box.addEventListener("mouseover", function( elem ){
+            box.innerText = (box.id);
+        });
+        buttonWrapper.appendChild( box );
+    }
+
+    function buildBox(){
+        var box = document.createElement('div');
+        box.id = (counter++);
+        box.className = 'divBox';
+        box.style.width = '155px';
+        box.style.height = '155px';
+        box.style.backgroundColor = 'black';
+        box.style.marginBottom = '1em'
+        return box;
+    }
+
+    function handleButtonClick( element ){
+        var val = element.id;
+        var prev = element.previousSibling;
+        var next = element.nextSibling;
+        if( !buttonWrapper.hasChildNodes() ){
+            alert("No buttons!");
+            return;
+        }
+        if( isEven( val ) ){
+            if( next ) buttonWrapper.removeChild( next );
+        } else {
+            
+            if( prev ) buttonWrapper.removeChild( prev );
+        }
+        if (box.id % 2 !== 0 && square == container.firstChild) {
+                alert('Element is Extinct')
+               
+            } else if (box.id % 2 !== 0) 
+                before.remove();
+             else if (box == container.lastChild) {
+                alert('Element is Extinct')
+             
+            }
+    }
+
+    function isEven( number ){
+        return ( number % 2 == 0 );
+    }
+
+    function randomColor() {
+    var randomRed = Math.floor(Math.random() * 255);
+    var randomGreen = Math.floor(Math.random() * 255);
+    var randomBlue = Math.floor(Math.random() * 255);
+    //creates the string that is the ‘random color’
+
+    var randomColor = "rgb("+randomRed+","+randomGreen+","+randomBlue+")";
+
+    return randomColor;-->
+}
+</script>
 </body>
 </html>  
